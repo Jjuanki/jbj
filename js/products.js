@@ -6,18 +6,18 @@
 // ============================================================================
 // CONFIGURACIÓN DE CONTACTO (Modifica estos valores con tus datos reales)
 // ============================================================================
-const JBJ_CONFIG = {
+export const JBJ_CONFIG = {
   // IMPORTANTE PARA WHATSAPP:
   // Si tu número es de Ecuador (ej: 0987939505), WhatsApp requiere el código de país 593 
   // quitando el 0 inicial: "593987939505". 
   // Si lo dejas con el 0 ("0987939505"), el sistema intentará auto-corregirlo para Ecuador (593).
   whatsappNumber: "593987939505", 
-  email: "contacto@jbjmochilas.com",
+  email: "luiscaranquijbj@hotmail.com",
   telefono: "0987939505",
   direccion: "Lima y Luxemburgo",
-  horario: "Lunes a Viernes de 8:00 a 18:00 hs",
+  horario: "Lunes a sábado de 8:00 a 18:00 hs",
   empresa: "JBJ"
-};
+};	
 
 // Hace que la configuración esté disponible globalmente sin importar cómo se cargue el script
 if (typeof window !== "undefined") {
@@ -27,7 +27,7 @@ if (typeof window !== "undefined") {
 /**
  * Normaliza el número para enlaces de WhatsApp wa.me
  */
-function getCleanWhatsAppNumber(rawNumber) {
+export function getCleanWhatsAppNumber(rawNumber) {
   let clean = (rawNumber || "").toString().replace(/[^0-9]/g, "");
   // Si empieza con 09 y tiene 10 dígitos (formato celular típico Ecuador), anteponer 593
   if (clean.startsWith("09") && clean.length === 10) {
@@ -44,34 +44,22 @@ if (typeof window !== "undefined") {
 // ============================================================================
 let productsData = [];
 
-// Elementos del DOM (se obtienen dinámicamente)
-let productsGrid = null;
-let categoryFiltersContainer = null;
-let searchInput = null;
-let noResultsMessage = null;
-let productModal = null;
-let closeModalBtn = null;
-
-function resolveDOMElements() {
-  productsGrid = document.getElementById("products-grid");
-  categoryFiltersContainer = document.getElementById("category-filters");
-  searchInput = document.getElementById("search-input");
-  noResultsMessage = document.getElementById("no-results");
-  productModal = document.getElementById("product-modal");
-  closeModalBtn = document.getElementById("close-modal-btn");
-}
+// Elementos del DOM
+const productsGrid = document.getElementById("products-grid");
+const categoryFiltersContainer = document.getElementById("category-filters");
+const searchInput = document.getElementById("search-input");
+const noResultsMessage = document.getElementById("no-results");
+const productModal = document.getElementById("product-modal");
+const closeModalBtn = document.getElementById("close-modal-btn");
 
 // Estado actual
 let currentCategory = "Todas";
 let currentSearchQuery = "";
-let isInitialized = false;
 
 /**
  * Inicializa el catálogo
  */
-async function initProducts() {
-  if (isInitialized) return;
-  resolveDOMElements();
+export async function initProducts() {
   try {
     const response = await fetch("./js/data/products.json");
     if (!response.ok) throw new Error("No se pudo cargar products.json");
@@ -239,18 +227,10 @@ async function initProducts() {
   renderProducts();
   setupSearch();
   setupModalEvents();
-  isInitialized = true;
 }
 
 if (typeof window !== "undefined") {
   window.initProducts = initProducts;
-}
-
-// Auto-ejecución inmediata cuando el DOM esté disponible
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", initProducts);
-} else {
-  initProducts();
 }
 
 /**
