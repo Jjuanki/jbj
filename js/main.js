@@ -2,11 +2,29 @@
  * JBJ Manufactura Textil - Main Application Script
  */
 
-import { initProducts, JBJ_CONFIG } from "./products.js";
+// Obtiene la configuración de forma universal (compatible con doble clic file:// y servidores web)
+const JBJ_CONFIG = (typeof window !== "undefined" && window.JBJ_CONFIG) ? window.JBJ_CONFIG : {
+  whatsappNumber: "593987939505",
+  email: "contacto@jbjmochilas.com",
+  telefono: "0987939505",
+  direccion: "Lima y Luxemburgo",
+  horario: "Lunes a Viernes de 8:00 a 18:00 hs",
+  empresa: "JBJ"
+};
+
+const getCleanWhatsAppNumber = (typeof window !== "undefined" && window.getCleanWhatsAppNumber)
+  ? window.getCleanWhatsAppNumber
+  : function(num) {
+      let clean = (num || "").toString().replace(/[^0-9]/g, "");
+      if (clean.startsWith("09") && clean.length === 10) clean = "593" + clean.substring(1);
+      return clean;
+    };
 
 document.addEventListener("DOMContentLoaded", () => {
   // 1. Inicializar catálogo interactivo
-  initProducts();
+  if (typeof window.initProducts === "function") {
+    window.initProducts();
+  }
 
   // 2. Cargar datos de contacto en elementos del DOM
   populateContactInfo();
@@ -31,20 +49,22 @@ document.addEventListener("DOMContentLoaded", () => {
  * Rellena los datos de contacto configurables en el sitio
  */
 function populateContactInfo() {
+  const config = window.JBJ_CONFIG || JBJ_CONFIG;
+
   const phoneElements = document.querySelectorAll(".jbj-phone");
-  phoneElements.forEach((el) => (el.textContent = JBJ_CONFIG.telefono));
+  phoneElements.forEach((el) => (el.textContent = config.telefono));
 
   const emailElements = document.querySelectorAll(".jbj-email");
   emailElements.forEach((el) => {
-    el.textContent = JBJ_CONFIG.email;
-    if (el.tagName === "A") el.href = `mailto:${JBJ_CONFIG.email}`;
+    el.textContent = config.email;
+    if (el.tagName === "A") el.href = `mailto:${config.email}`;
   });
 
   const addressElements = document.querySelectorAll(".jbj-address");
-  addressElements.forEach((el) => (el.textContent = JBJ_CONFIG.direccion));
+  addressElements.forEach((el) => (el.textContent = config.direccion));
 
   const hoursElements = document.querySelectorAll(".jbj-hours");
-  hoursElements.forEach((el) => (el.textContent = JBJ_CONFIG.horario));
+  hoursElements.forEach((el) => (el.textContent = config.horario));
 }
 
 /**
@@ -75,10 +95,13 @@ function setupWhatsAppFloat() {
   const waFloat = document.getElementById("whatsapp-float-btn");
   if (!waFloat) return;
 
+  const config = window.JBJ_CONFIG || JBJ_CONFIG;
+  const cleanWa = getCleanWhatsAppNumber(config.whatsappNumber);
+
   const defaultMsg = encodeURIComponent(
     "¡Hola JBJ! Me contacto desde su página web para solicitar información sobre fabricación de mochilas y catálogo."
   );
-  waFloat.href = `https://wa.me/${JBJ_CONFIG.whatsappNumber}?text=${defaultMsg}`;
+  waFloat.href = `https://wa.me/${cleanWa}?text=${defaultMsg}`;
 }
 
 /**
@@ -92,6 +115,9 @@ function setupContactForm() {
 
   contactForm.addEventListener("submit", (e) => {
     e.preventDefault();
+
+    const config = window.JBJ_CONFIG || JBJ_CONFIG;
+    const cleanWa = getCleanWhatsAppNumber(config.whatsappNumber);
 
     const nombre = document.getElementById("form-nombre")?.value.trim() || "";
     const email = document.getElementById("form-email")?.value.trim() || "";
@@ -114,7 +140,7 @@ function setupContactForm() {
       `• *Mensaje:* ${mensaje}`
     );
 
-    const enlaceWhatsApp = `https://wa.me/${JBJ_CONFIG.whatsappNumber}?text=${textoWhatsApp}`;
+    const enlaceWhatsApp = `https://wa.me/${cleanWa}?text=${textoWhatsApp}`;
 
     if (formStatus) {
       formStatus.innerHTML = `

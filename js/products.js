@@ -7,17 +7,37 @@
 // CONFIGURACIÓN DE CONTACTO (Modifica estos valores con tus datos reales)
 // ============================================================================
 export const JBJ_CONFIG = {
-  // Ingresa tu número de WhatsApp con código de país (sin el signo +, ni espacios, ni guiones)
-  // Ejemplo para Argentina (+54 9 11 1234-5678): "5491112345678"
-  // Ejemplo para México (+52 1 55 1234-5678): "5215512345678"
-  // Ejemplo para Perú (+51 987 654 321): "51987654321"
-  whatsappNumber: "5491199998888", 
+  // IMPORTANTE PARA WHATSAPP:
+  // Si tu número es de Ecuador (ej: 0987939505), WhatsApp requiere el código de país 593 
+  // quitando el 0 inicial: "593987939505". 
+  // Si lo dejas con el 0 ("0987939505"), el sistema intentará auto-corregirlo para Ecuador (593).
+  whatsappNumber: "593987939505", 
   email: "contacto@jbjmochilas.com",
-  telefono: "+54 (11) 4567-8900",
-  direccion: "Parque Industrial Textil, Sector 4, Lote 12",
-  horario: "Lunes a Viernes de 8:00 a 17:30 hs",
-  empresa: "JBJ Manufactura Textil"
+  telefono: "0987939505",
+  direccion: "Lima y Luxemburgo",
+  horario: "Lunes a Viernes de 8:00 a 18:00 hs",
+  empresa: "JBJ"
 };
+
+// Hace que la configuración esté disponible globalmente sin importar cómo se cargue el script
+if (typeof window !== "undefined") {
+  window.JBJ_CONFIG = JBJ_CONFIG;
+}
+
+/**
+ * Normaliza el número para enlaces de WhatsApp wa.me
+ */
+export function getCleanWhatsAppNumber(rawNumber) {
+  let clean = (rawNumber || "").toString().replace(/[^0-9]/g, "");
+  // Si empieza con 09 y tiene 10 dígitos (formato celular típico Ecuador), anteponer 593
+  if (clean.startsWith("09") && clean.length === 10) {
+    clean = "593" + clean.substring(1);
+  }
+  return clean;
+}
+if (typeof window !== "undefined") {
+  window.getCleanWhatsAppNumber = getCleanWhatsAppNumber;
+}
 
 // ============================================================================
 // DATOS DE RESPALDO (Garantiza funcionamiento incluso al abrir con doble clic sin servidor local)
@@ -209,6 +229,10 @@ export async function initProducts() {
   setupModalEvents();
 }
 
+if (typeof window !== "undefined") {
+  window.initProducts = initProducts;
+}
+
 /**
  * Genera dinámicamente los botones de categorías con conteo
  */
@@ -280,7 +304,8 @@ function renderProducts() {
       const whatsappMsg = encodeURIComponent(
         `¡Hola JBJ! Vengo desde el sitio web y me interesa consultar por la mochila o producto: ${product.nombre} (Ref: ${product.id}). ¿Tienen disponibilidad o lista de precios?`
       );
-      const whatsappLink = `https://wa.me/${JBJ_CONFIG.whatsappNumber}?text=${whatsappMsg}`;
+      const cleanWa = getCleanWhatsAppNumber(JBJ_CONFIG.whatsappNumber);
+      const whatsappLink = `https://wa.me/${cleanWa}?text=${whatsappMsg}`;
 
       return `
         <article class="product-card bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col justify-between group">
@@ -384,7 +409,8 @@ window.openProductModal = function (productId) {
   const whatsappMsg = encodeURIComponent(
     `¡Hola JBJ! Quisiera cotizar formalmente la confección o compra del producto: ${product.nombre} (Ref: ${product.id}). ¿Qué cantidad mínima manejan y cuáles son los tiempos de entrega?`
   );
-  const whatsappLink = `https://wa.me/${JBJ_CONFIG.whatsappNumber}?text=${whatsappMsg}`;
+  const cleanWa = getCleanWhatsAppNumber(JBJ_CONFIG.whatsappNumber);
+  const whatsappLink = `https://wa.me/${cleanWa}?text=${whatsappMsg}`;
 
   const modalBody = document.getElementById("modal-body");
   if (modalBody) {
