@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JBJ | Fabricación de Mochilas y Manufactura Textil</title>
+  
+  <!-- Meta SEO -->
+  <meta name="description" content="JBJ - Especialistas en manufactura y confección de mochilas urbanas, ejecutivas, deportivas, escolares y accesorios textiles. Venta minorista y corporativa por mayor." />
+  <meta name="keywords" content="JBJ, mochilas, manufactura textil, fábrica de mochilas, mochilas por mayor, bolsos, mochilas ejecutivas, mochilas personalizadas" />
+  <meta property="og:title" content="JBJ | Fabricación de Mochilas y Manufactura Textil" />
+  <meta property="og:description" content="Mochilas y productos textiles de alta resistencia con calidad garantizada de fábrica. Explora nuestro catálogo y cotiza al instante." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0f7ff',
+              100: '#e0effe',
+              500: '#0284c7',
+              600: '#0369a1',
+              800: '#075985',
+              900: '#0c4a6e',
+              dark: '#0f172a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Estilos complementarios y animaciones -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-blue-600 selection:text-white">
+
+  <!-- =========================================================================
+       1. BARRA SUPERIOR DE AVISOS / INFORMACIÓN INDUSTRIAL
+       ========================================================================= -->
+  <div class="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="font-medium">Fabricación Textil & Venta Directa de Fábrica | Envíos a todo el país</span>
+      </div>
+      <div class="flex items-center gap-4 text-xs">
+        <span class="hidden md:inline text-slate-400">Atención: <strong class="jbj-hours text-slate-200">Lun a Vie 8:00 a 17:30</strong></span>
+        <a href="#contacto" class="text-blue-400 hover:text-blue-300 transition-colors font-semibold">Ventas por Mayor</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       2. HEADER / NAVEGACIÓN
+       ========================================================================= -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo de Marca JBJ -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="w-12 h-12 bg-slate-950 text-white rounded-xl flex items-center justify-center font-extrabold text-2xl tracking-tighter shadow-md group-hover:bg-blue-600 transition-colors">
+            JBJ
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xl font-extrabold tracking-tight text-slate-900 leading-tight">JBJ</span>
+            <span class="text-[10px] font-bold tracking-widest text-slate-500 uppercase">Manufactura & Mochilas</span>
+          </div>
+        </a>
+
+        <!-- Enlaces Principales (Escritorio) -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-700">
+          <a href="#inicio" class="hover:text-blue-600 transition-colors">Inicio</a>
+          <a href="#nosotros" class="hover:text-blue-600 transition-colors">Empresa</a>
+          <a href="#catalogo" class="hover:text-blue-600 transition-colors">Catálogo de Productos</a>
+          <a href="#corporativo" class="hover:text-blue-600 transition-colors">Corporativo / Por Mayor</a>
+          <a href="#contacto" class="hover:text-blue-600 transition-colors">Contacto</a>
+        </nav>
+
+        <!-- CTA Header -->
+        <div class="hidden lg:flex items-center gap-4">
+          <a href="#catalogo" class="px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-blue-600 text-white text-sm font-bold shadow-sm transition-colors flex items-center gap-2">
+            <span>Ver Catálogo</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </a>
+        </div>
+
+        <!-- Botón Menú Móvil -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none" aria-label="Abrir menú">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menú Desplegable Móvil -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-3">
+      <a href="#inicio" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-slate-800 hover:bg-slate-50">Inicio</a>
+      <a href="#nosotros" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-slate-800 hover:bg-slate-50">Empresa</a>
+      <a href="#catalogo" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-slate-800 hover:bg-slate-50">Catálogo de Productos</a>
+      <a href="#corporativo" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-slate-800 hover:bg-slate-50">Corporativo / Por Mayor</a>
+      <a href="#contacto" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-slate-800 hover:bg-slate-50">Contacto</a>
+      <div class="pt-2">
+        <a href="#catalogo" class="mobile-nav-link w-full py-3 rounded-xl bg-blue-600 text-white font-bold text-center block">Explorar Catálogo</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       3. HERO SECTION (PORTADA PRINCIPAL)
+       ========================================================================= -->
+  <section id="inicio" class="relative overflow-hidden bg-slate-950 text-white py-16 sm:py-24 lg:py-32">
+    <!-- Patrón sutil y gradientes de fondo -->
+    <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+    <div class="absolute -top-40 -right-40 w-96 h-96 bg-blue-600/30 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Texto Principal -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-800/90 border border-slate-700 text-xs font-semibold text-blue-300">
+            <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+            MANUFACTURA TEXTIL Y MOCHILAS DE ALTA RESISTENCIA
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] text-white">
+            Mochilas creadas para resistir tu ritmo, <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-sky-300">directo de fábrica.</span>
+          </h1>
+
+          <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+            En <strong>JBJ</strong> transformamos textiles de ingeniería en mochilas urbanas, ejecutivas, escolares y accesorios de máxima durabilidad. Diseñadas para profesionales, estudiantes y empresas que exigen calidad garantizada.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href="#catalogo" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-base shadow-lg shadow-blue-600/30 transition-all hover:scale-105 flex items-center justify-center gap-2">
+              <span>Explorar Catálogo</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+            <a href="#contacto" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 font-bold text-base transition-colors flex items-center justify-center gap-2">
+              <span>Cotizar al por Mayor</span>
+            </a>
+          </div>
+
+          <!-- Sellos de Confianza -->
+          <div class="pt-8 border-t border-slate-800/80 grid grid-cols-2 sm:grid-cols-3 gap-6 text-left">
+            <div>
+              <div class="text-2xl font-extrabold text-white">100%</div>
+              <div class="text-xs text-slate-400 mt-0.5">Control de Costuras y Resistencia</div>
+            </div>
+            <div>
+              <div class="text-2xl font-extrabold text-white">+50k</div>
+              <div class="text-xs text-slate-400 mt-0.5">Mochilas Fabricadas</div>
+            </div>
+            <div class="col-span-2 sm:col-span-1">
+              <div class="text-2xl font-extrabold text-emerald-400">12 Meses</div>
+              <div class="text-xs text-slate-400 mt-0.5">Garantía Directa de Fábrica</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Imagen Destacada del Hero -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-800 bg-slate-900 group">
+              <img 
+                src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=80" 
+                alt="Mochila JBJ Vanguard" 
+                class="w-full h-[460px] object-cover object-center group-hover:scale-105 transition-transform duration-700"
+              />
+              
+              <!-- Tarjeta flotante sobre la imagen -->
+              <div class="absolute bottom-4 left-4 right-4 bg-slate-950/85 backdrop-blur-md p-4 rounded-2xl border border-slate-800 text-white flex items-center justify-between">
+                <div>
+                  <span class="text-[10px] uppercase tracking-wider font-bold text-blue-400">Línea Destacada</span>
+                  <div class="font-extrabold text-sm sm:text-base text-white">JBJ Vanguard Pro 25L</div>
+                  <div class="text-xs text-slate-300">Poliéster 900D Ripstop • Repelente al agua</div>
+                </div>
+                <a href="#catalogo" class="p-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition-transform hover:scale-110">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. PILARES DE FABRICACIÓN / NOSOTROS
+       ========================================================================= -->
+  <section id="nosotros" class="py-20 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs font-extrabold tracking-widest text-blue-600 uppercase">¿Por qué elegir JBJ?</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          Ingeniería textil aplicada a la durabilidad de cada mochila
+        </h2>
+        <p class="text-slate-600 text-base">
+          No somos revendedores. En <strong>JBJ</strong> dominamos la manufactura desde el corte de los paños técnicos hasta el refuerzo estructural de cada correa y cierre.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-14">
+        
+        <!-- Característica 1 -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-400 transition-all hover:shadow-md">
+          <div class="w-12 h-12 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-xl mb-5 shadow-md">
+            🧵
+          </div>
+          <h3 class="font-bold text-lg text-slate-900 mb-2">Telas Técnicas y Ripstop</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Utilizamos hilados de alta tenacidad (600D, 900D y Cordura) resistentes a la abrasión, desgarros y con recubrimiento hidrófugo.
+          </p>
+        </div>
+
+        <!-- Característica 2 -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-400 transition-all hover:shadow-md">
+          <div class="w-12 h-12 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-xl mb-5 shadow-md">
+            🛡️
+          </div>
+          <h3 class="font-bold text-lg text-slate-900 mb-2">Costuras Reforzadas</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Pespuntes dobles y triples en zonas de carga crítica (unión de tirantes, manijas y base inferior) para soportar peso continuo sin deformarse.
+          </p>
+        </div>
+
+        <!-- Característica 3 -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-400 transition-all hover:shadow-md">
+          <div class="w-12 h-12 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-xl mb-5 shadow-md">
+            🏭
+          </div>
+          <h3 class="font-bold text-lg text-slate-900 mb-2">Fabricación Corporativa</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Diseñamos y confeccionamos partidas especiales a pedido con bordado, transfer o serigrafía institucional para eventos o dotaciones empresariales.
+          </p>
+        </div>
+
+        <!-- Característica 4 -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-400 transition-all hover:shadow-md">
+          <div class="w-12 h-12 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-xl mb-5 shadow-md">
+            🤝
+          </div>
+          <h3 class="font-bold text-lg text-slate-900 mb-2">Venta Directa sin Fricción</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Acceso a precios directos de fábrica. Asesoramiento personalizado tanto para clientes particulares como para distribuidores mayoristas.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. CATÁLOGO INTERACTIVO DE PRODUCTOS
+       ========================================================================= -->
+  <section id="catalogo" class="py-20 bg-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Encabezado de Catálogo -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-8 border-b border-slate-200">
+        <div>
+          <span class="text-xs font-extrabold tracking-widest text-blue-600 uppercase">Catálogo JBJ</span>
+          <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mt-1">
+            Nuestras Líneas de Fabricación
+          </h2>
+          <p class="text-slate-600 text-sm mt-2 max-w-xl">
+            Selecciona una categoría o busca por nombre de producto, capacidad o material para encontrar la mochila perfecta.
+          </p>
+        </div>
+
+        <!-- Buscador en tiempo real -->
+        <div class="w-full md:w-80">
+          <label for="search-input" class="sr-only">Buscar mochilas</label>
+          <div class="relative">
+            <input 
+              type="text" 
+              id="search-input" 
+              placeholder="Buscar por modelo, material, 25L..." 
+              class="w-full pl-10 pr-4 py-3 bg-white border border-slate-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent shadow-sm"
+            />
+            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filtros por Categoría dinámicos -->
+      <div class="mt-8 flex items-center gap-2 overflow-x-auto pb-4 no-scrollbar" id="category-filters">
+        <!-- Renderizado dinámico desde products.js -->
+      </div>
+
+      <!-- Grid de Productos -->
+      <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-8">
+        <!-- Los productos se inyectan dinámicamente con JavaScript -->
+      </div>
+
+      <!-- Mensaje cuando no hay resultados en la búsqueda -->
+      <div id="no-results" class="hidden text-center py-16 bg-white rounded-3xl border border-slate-200 mt-8 shadow-sm">
+        <div class="text-4xl mb-3">🔍</div>
+        <h3 class="text-lg font-bold text-slate-800">No encontramos coincidencias</h3>
+        <p class="text-slate-500 text-sm max-w-sm mx-auto mt-1">Prueba con otra palabra clave o selecciona "Todas" en las categorías para ver todo el catálogo.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. SECCIÓN DE VENTAS MAYORISTAS Y CORPORATIVAS
+       ========================================================================= -->
+  <section id="corporativo" class="py-16 bg-slate-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gradient-to-r from-blue-900 to-slate-900 rounded-3xl p-8 sm:p-12 lg:p-16 border border-blue-800/50 shadow-2xl relative overflow-hidden">
+        <div class="relative z-10 max-w-2xl space-y-4">
+          <span class="inline-block bg-blue-500/20 text-blue-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-blue-400/30">
+            División Corporativa & Marcas
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight">
+            ¿Necesitas fabricar mochilas personalizadas para tu empresa?
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            Confeccionamos pedidos por volumen con el logo de tu empresa, colegio o club deportivo. Desarrollamos matrices a medida, elección de telas técnicas y combinación de colores institucionales.
+          </p>
+          <div class="flex flex-wrap items-center gap-4 pt-4">
+            <a href="#contacto" class="px-6 py-3.5 rounded-xl bg-white text-slate-950 hover:bg-slate-100 font-extrabold text-sm transition-colors shadow-md">
+              Solicitar Cotización por Volumen
+            </a>
+            <span class="text-xs text-blue-200 flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Mínimos flexibles desde 20 unidades
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       7. CONTACTO & FORMULARIO
+       ========================================================================= -->
+  <section id="contacto" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="text-xs font-extrabold tracking-widest text-blue-600 uppercase">Contacto Directo</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+          Hablemos de tu próximo pedido
+        </h2>
+        <p class="text-slate-600 text-base">
+          Envíanos tu consulta y un asesor técnico de JBJ te responderá a la brevedad con información de stock, listas de precios y tiempos de entrega.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Tarjeta de Información de Contacto -->
+        <div class="lg:col-span-5 bg-slate-900 text-white rounded-3xl p-8 sm:p-10 flex flex-col justify-between shadow-xl">
+          <div class="space-y-8">
+            <div>
+              <h3 class="text-2xl font-bold tracking-tight">Información de Fábrica</h3>
+              <p class="text-slate-400 text-sm mt-1">Canales oficiales de atención para clientes y distribuidores.</p>
+            </div>
+
+            <div class="space-y-6 text-sm">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-slate-800 text-blue-400 flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                </div>
+                <div>
+                  <span class="text-xs uppercase tracking-wider text-slate-400 block font-semibold">Teléfono Directo</span>
+                  <span class="jbj-phone font-semibold text-white">+54 (11) 4567-8900</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-slate-800 text-blue-400 flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                </div>
+                <div>
+                  <span class="text-xs uppercase tracking-wider text-slate-400 block font-semibold">Correo Electrónico</span>
+                  <a href="mailto:contacto@jbjmochilas.com" class="jbj-email font-semibold text-white hover:text-blue-400 transition-colors">contacto@jbjmochilas.com</a>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-slate-800 text-blue-400 flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                </div>
+                <div>
+                  <span class="text-xs uppercase tracking-wider text-slate-400 block font-semibold">Planta de Fabricación</span>
+                  <span class="jbj-address font-semibold text-white">Parque Industrial Textil, Sector 4</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-slate-800 text-blue-400 flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <div>
+                  <span class="text-xs uppercase tracking-wider text-slate-400 block font-semibold">Horario de Despacho</span>
+                  <span class="jbj-hours font-semibold text-white">Lunes a Viernes de 8:00 a 17:30 hs</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-8 border-t border-slate-800 mt-8">
+            <span class="text-xs text-slate-400 block mb-2">Presencia en redes:</span>
+            <div class="flex items-center gap-3">
+              <span class="text-xs font-semibold px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300">@jbjmochilas</span>
+              <span class="text-xs font-semibold px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300">/jbj.textil</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulario Interactivo -->
+        <div class="lg:col-span-7 bg-slate-50 border border-slate-200 rounded-3xl p-8 sm:p-10 shadow-sm">
+          
+          <div id="form-status" class="hidden mb-6"></div>
+
+          <form id="contact-form" class="space-y-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="form-nombre" class="block text-xs font-bold text-slate-700 uppercase mb-2">Nombre y Apellido *</label>
+                <input 
+                  type="text" 
+                  id="form-nombre" 
+                  required 
+                  placeholder="Tu nombre completo"
+                  class="w-full px-4 py-3 bg-white border border-slate-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                />
+              </div>
+
+              <div>
+                <label for="form-telefono" class="block text-xs font-bold text-slate-700 uppercase mb-2">Teléfono / WhatsApp</label>
+                <input 
+                  type="tel" 
+                  id="form-telefono" 
+                  placeholder="+54 9 11 1234-5678"
+                  class="w-full px-4 py-3 bg-white border border-slate-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="form-email" class="block text-xs font-bold text-slate-700 uppercase mb-2">Correo Electrónico</label>
+                <input 
+                  type="email" 
+                  id="form-email" 
+                  placeholder="tuemail@ejemplo.com"
+                  class="w-full px-4 py-3 bg-white border border-slate-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                />
+              </div>
+
+              <div>
+                <label for="form-tipo" class="block text-xs font-bold text-slate-700 uppercase mb-2">Tipo de Consulta</label>
+                <select 
+                  id="form-tipo"
+                  class="w-full px-4 py-3 bg-white border border-slate-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                >
+                  <option value="Consulta Minorista (1 unidad)">Compra Minorista</option>
+                  <option value="Ventas Mayoristas (20+ unidades)">Venta Mayorista / Distribuidores</option>
+                  <option value="Mochilas Corporativas con Logo">Confección Corporativa con Logo</option>
+                  <option value="Otro tipo de consulta">Otro requerimiento textil</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="form-mensaje" class="block text-xs font-bold text-slate-700 uppercase mb-2">Mensaje o Consulta Técnica *</label>
+              <textarea 
+                id="form-mensaje" 
+                rows="4" 
+                required 
+                placeholder="Escribe aquí los modelos de tu interés, cantidades requeridas o cualquier especificación técnica..."
+                class="w-full px-4 py-3 bg-white border border-slate-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+              ></textarea>
+            </div>
+
+            <button 
+              type="submit" 
+              class="w-full py-4 px-6 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-sm shadow-md shadow-blue-600/20 transition-all flex items-center justify-center gap-2">
+              <span>Enviar Consulta a JBJ</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+            <p class="text-center text-xs text-slate-400">Te asistiremos en minutos vía WhatsApp o correo electrónico.</p>
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       8. MODAL DE PRODUCTO (VISTA DETALLADA)
+       ========================================================================= -->
+  <div id="product-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 modal-backdrop hidden">
+    <div class="relative bg-white rounded-3xl max-w-3xl w-full p-6 sm:p-8 overflow-hidden shadow-2xl modal-content-box max-h-[90vh] overflow-y-auto">
+      
+      <!-- Botón de Cerrar Modal -->
+      <button 
+        id="close-modal-btn" 
+        class="absolute top-5 right-5 p-2 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 transition-colors z-10"
+        aria-label="Cerrar modal">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <!-- Contenido inyectado dinámicamente -->
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       9. BOTÓN FLOTANTE DE WHATSAPP
+       ========================================================================= -->
+  <a 
+    id="whatsapp-float-btn" 
+    href="#" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    class="whatsapp-float group" 
+    aria-label="Contactar por WhatsApp">
+    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.107.005.25.04.389.376.144.35.49 1.198.533 1.286.044.088.073.19.015.305-.058.115-.087.188-.173.289l-.26.305c-.087.086-.178.18-.076.355.101.174.45 1.745 1.503 1.684.347.155.64.208.732.222.144.022.289-.007.39-.123l.505-.592c.116-.145.246-.116.376-.072.13.043.823.388.968.46.144.072.245.108.281.173.036.065.036.377-.108.782z"/></svg>
+  </a>
+
+  <!-- =========================================================================
+       10. FOOTER
+       ========================================================================= -->
+  <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        
+        <div class="space-y-3">
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 bg-blue-600 text-white rounded-lg flex items-center justify-center font-black text-base">JBJ</div>
+            <span class="text-xl font-black text-white">JBJ</span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Especialistas en manufactura de mochilas, morrales y accesorios textiles con calidad garantizada de fábrica.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-white text-xs font-bold uppercase tracking-wider mb-3">Navegación</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#inicio" class="hover:text-white transition-colors">Inicio</a></li>
+            <li><a href="#nosotros" class="hover:text-white transition-colors">Nuestra Fábrica</a></li>
+            <li><a href="#catalogo" class="hover:text-white transition-colors">Catálogo de Productos</a></li>
+            <li><a href="#contacto" class="hover:text-white transition-colors">Contacto & Pedidos</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white text-xs font-bold uppercase tracking-wider mb-3">Líneas de Producción</h4>
+          <ul class="space-y-2 text-xs">
+            <li><span class="hover:text-white">Mochilas Urbanas & Casuales</span></li>
+            <li><span class="hover:text-white">Mochilas Ejecutivas para Laptop</span></li>
+            <li><span class="hover:text-white">Bolsos Deportivos & Viaje</span></li>
+            <li><span class="hover:text-white">Accesorios Textiles & Cartucheras</span></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white text-xs font-bold uppercase tracking-wider mb-3">Atención al Cliente</h4>
+          <p class="text-xs text-slate-400 leading-relaxed mb-2">
+            Despachos a todo el país. Cotizaciones para empresas y distribuidores.
+          </p>
+          <div class="text-xs font-semibold text-slate-200">
+            WhatsApp: <span class="jbj-phone text-blue-400">+54 (11) 4567-8900</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <p>&copy; <span id="current-year">2026</span> JBJ Manufactura Textil. Todos los derechos reservados.</p>
+        <p>Desplegado con GitHub Pages</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

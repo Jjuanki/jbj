@@ -1,0 +1,154 @@
+[
+  {
+    "id": "jbj-urb-01",
+    "nombre": "Mochila Urbana JBJ Vanguard 25L",
+    "categoria": "Urbanas & Casuales",
+    "descripcion": "Diseñada para el ritmo diario de la ciudad. Confeccionada en tela poliéster 900D impermeable, costuras reforzadas y compartimiento acolchado para notebook de hasta 15.6 pulgadas.",
+    "material": "Poliéster 900D Ripstop repelente al agua",
+    "capacidad": "25 Litros",
+    "dimensiones": "45 x 30 x 16 cm",
+    "precio": "$32.500",
+    "destacado": true,
+    "etiqueta": "Más Vendido",
+    "imagen": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80",
+    "caracteristicas": [
+      "Compartimiento acolchado para notebook 15.6\"",
+      "Bolsillo frontal antirrobo con organizador interno",
+      "Espaldar ergonómico con tejido mesh antitranspirante",
+      "Cierres reforzados tipo autorreparables"
+    ]
+  },
+  {
+    "id": "jbj-eje-02",
+    "nombre": "Mochila Ejecutiva JBJ Pro Executive 28L",
+    "categoria": "Ejecutivas & Laptop",
+    "descripcion": "Elegancia, ergonomía y máxima protección para profesionales. Estructura semi-rígida, puerto USB exterior de carga y organizador inteligente para periféricos y documentos.",
+    "material": "Cordura técnica de alta densidad con detalles en ecocuero",
+    "capacidad": "28 Litros",
+    "dimensiones": "48 x 32 x 18 cm",
+    "precio": "$41.000",
+    "destacado": true,
+    "etiqueta": "Línea Premium",
+    "imagen": "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&w=800&q=80",
+    "caracteristicas": [
+      "Apertura 180° estilo valija para fácil guardado",
+      "Funda interna para laptop 17\" y tablet 11\"",
+      "Correa para anclaje a equipaje / carry-on",
+      "Bolsillo oculto para pasaporte o billetera"
+    ]
+  },
+  {
+    "id": "jbj-dep-03",
+    "nombre": "Bolso Mochila JBJ Sport & Trek 40L",
+    "categoria": "Deportivas & Viaje",
+    "descripcion": "El compañero ideal para entrenamientos o viajes de fin de semana. Funciona como bolso de mano o mochila gracias a sus correas ocultables y compartimento aislado para calzado.",
+    "material": "Lona Oxford 1000D de alta resistencia al desgarro",
+    "capacidad": "40 Litros",
+    "dimensiones": "52 x 34 x 22 cm",
+    "precio": "$38.000",
+    "destacado": true,
+    "etiqueta": "Versátil 2 en 1",
+    "imagen": "https://images.unsplash.com/photo-1546938576-6e6a64f317cc?auto=format&fit=crop&w=800&q=80",
+    "caracteristicas": [
+      "Compartimiento independiente y ventilado para zapatillas",
+      "Bolsillo impermeable para ropa húmeda o toallas",
+      "Correas acolchadas desmontables y convertibles",
+      "Base reforzada con tacos de goma anti-desgaste"
+    ]
+  },
+  {
+    "id": "jbj-esc-04",
+    "nombre": "Mochila Escolar Reforzada JBJ Titan 22L",
+    "categoria": "Escolares & Juveniles",
+    "descripcion": "Creada para soportar el uso intensivo diario escolar o secundario. Triple costura en puntos de tracción, base doble fondo y soporte lumbar diseñado para cuidar la espalda.",
+    "material": "Poliéster 600D ultra durable",
+    "capacidad": "22 Litros",
+    "dimensiones": "42 x 29 x 15 cm",
+    "precio": "$26.500",
+    "destacado": false,
+    "etiqueta": "Alta Durabilidad",
+    "imagen": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
+    "caracteristicas": [
+      "Base de doble capa de material anti-rozaduras",
+      "Detalles reflectivos frontales y laterales de seguridad",
+      "Doble bolsillo lateral para botellas de hidratación",
+      "Tirantes ergonómicos en 'S' con acolchado grueso"
+    ]
+  },
+  {
+    "id": "jbj-acc-05",
+    "nombre": "Cartuchera Organizadora JBJ Double Zip",
+    "categoria": "Accesorios Textiles",
+    "descripcion": "Estuche organizador multiuso de manufactura textil reforzada. Ideal para útiles de oficina, herramientas de dibujo o cables y cargadores de viaje.",
+    "material": "Poliéster texturizado lavable",
+    "capacidad": "1.5 Litros",
+    "dimensiones": "22 x 10 x 8 cm",
+    "precio": "$8.200",
+    "destacado": false,
+    "etiqueta": "Accesorio",
+    "imagen": "https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&w=800&q=80",
+    "caracteristicas": [
+      "Doble compartimento con cierre individual",
+      "Interior forrado anti-manchas",
+      "Manija lateral de transporte rápido",
+      "Tiracierre reforzado ergonómico"
+    ]
+  },
+  {
+    "id": "jbj-urb-06",
+    "nombre": "Morral Cruzado JBJ Daily Sling 8L",
+    "categoria": "Urbanas & Casuales",
+    "descripcion": "Morral textil tipo bandolera ergonómica para llevar lo esencial: llaves, celular, tablet y libreta. Ajuste ambidiestro para usar al frente o a la espalda.",
+    "material": "Nylon antidesgarro con recubrimiento mate",
+    "capacidad": "8 Litros",
+    "dimensiones": "32 x 20 x 10 cm",
+    "precio": "$19.800",
+    "destacado": false,
+    "etiqueta": "Tendencia",
+    "imagen": "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80",
+    "caracteristicas": [
+      "Correa acolchada intercambiable para hombro izquierdo o derecho",
+      "Hebilla de liberación rápida de uso táctico",
+      "Bolsillo de seguridad pegado al cuerpo",
+      "Forro interior con contraste de color para fácil visibilidad"
+    ]
+  },
+  {
+    "id": "jbj-eje-07",
+    "nombre": "Mochila Corporativa JBJ Custom Line 24L",
+    "categoria": "Ejecutivas & Laptop",
+    "descripcion": "Ideal para empresas, eventos o dotaciones corporativas. Diseñada con amplio panel frontal limpio, óptimo para bordados o estampados de logos empresariales por mayor.",
+    "material": "Poliéster Oxford 800D con acabado premium",
+    "capacidad": "24 Litros",
+    "dimensiones": "44 x 31 x 15 cm",
+    "precio": "Consultar por mayor",
+    "destacado": true,
+    "etiqueta": "Ventas Corporativas",
+    "imagen": "https://images.unsplash.com/photo-1577733966973-d680bffd2e80?auto=format&fit=crop&w=800&q=80",
+    "caracteristicas": [
+      "Panel listo para personalización y bordado corporativo",
+      "Porta notebook 15.6\" con protección en laterales",
+      "Descuentos escalonados por volumen de fabricación",
+      "Disponible en paleta de colores institucionales"
+    ]
+  },
+  {
+    "id": "jbj-acc-08",
+    "nombre": "Neceser Textil JBJ Traveler Washbag",
+    "categoria": "Accesorios Textiles",
+    "descripcion": "Organizador de aseo o herramientas con gancho colgador incorporado. Confección textil con interior impermeable fácil de limpiar.",
+    "material": "Poliéster ripstop con forro de PVC impermeable",
+    "capacidad": "4 Litros",
+    "dimensiones": "25 x 18 x 9 cm",
+    "precio": "$12.400",
+    "destacado": false,
+    "etiqueta": "Accesorio",
+    "imagen": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80",
+    "caracteristicas": [
+      "Gancho metálico giratorio para colgar",
+      "Bolsillos de malla transparente con cierre",
+      "Tejido exterior resistente a salpicaduras",
+      "Costuras selladas en la base"
+    ]
+  }
+]
