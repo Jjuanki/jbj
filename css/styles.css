@@ -4,10 +4,10 @@
 
 /* Variables de marca */
 :root {
-  --color-primary: #0f172a;    /* Slate oscuro elegante */
-  --color-accent: #2563eb;     /* Azul industrial / confianza */
-  --color-accent-hover: #1d4ed8;
-  --color-highlight: #f97316;  /* Naranja de acción / confección */
+  --color-primary: #ff2d2d;    /* Slate oscuro elegante */
+  --color-accent: #1e5bff;     /* Rojo industrial / energía */
+  --color-accent-hover: #111827;
+  --color-highlight: #f8fafc;  /* Azul de acción / confianza */
   --color-whatsapp: #25D366;
 }
 
