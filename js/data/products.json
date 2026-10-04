@@ -1,0 +1,121 @@
+[
+  {
+    "id": "jbj-acc-09",
+    "nombre": "Neceser Textil JBJ Traveler Washbag",
+    "categoria": "Accesorios Textiles",
+    "descripcion": "Organizador de aseo o herramientas con gancho colgador incorporado. Confección textil con interior impermeable fácil de limpiar.",
+    "material": "Poliéster ripstop con forro de PVC impermeable",
+    "capacidad": "4 Litros",
+    "dimensiones": "25 x 18 x 9 cm",
+    "precio": "$12.400",
+    "destacado": false,
+    "etiqueta": "Accesorio",
+    "imagen": "./recursos/Gemini_Generated_Image_a1g139a1g139a1g1 (2).jpg",
+    "caracteristicas": [
+      "Gancho metálico giratorio para colgar",
+      "Bolsillos de malla transparente con cierre",
+      "Tejido exterior resistente a salpicaduras",
+      "Costuras selladas en la base"
+    ]
+  }
+  ,
+  {
+    "id": "jbj-acc-10",
+    "nombre": "Neceser Textil JBJ Traveler Washbag",
+    "categoria": "Accesorios Textiles",
+    "descripcion": "Organizador de aseo o herramientas con gancho colgador incorporado. Confección textil con interior impermeable fácil de limpiar.",
+    "material": "Poliéster ripstop con forro de PVC impermeable",
+    "capacidad": "4 Litros",
+    "dimensiones": "25 x 18 x 9 cm",
+    "precio": "$12.400",
+    "destacado": false,
+    "etiqueta": "Accesorio",
+    "imagen": "./recursos/Gemini_Generated_Image_a1g139a1g139a1g1 (1).jpg",
+    "caracteristicas": [
+      "Gancho metálico giratorio para colgar",
+      "Bolsillos de malla transparente con cierre",
+      "Tejido exterior resistente a salpicaduras",
+      "Costuras selladas en la base"
+    ]
+  }
+  ,
+  {
+    "id": "jbj-acc-11",
+    "nombre": "Neceser Textil JBJ Traveler Washbag",
+    "categoria": "Accesorios Textiles",
+    "descripcion": "Organizador de aseo o herramientas con gancho colgador incorporado. Confección textil con interior impermeable fácil de limpiar.",
+    "material": "Poliéster ripstop con forro de PVC impermeable",
+    "capacidad": "4 Litros",
+    "dimensiones": "25 x 18 x 9 cm",
+    "precio": "$12.400",
+    "destacado": false,
+    "etiqueta": "Accesorio",
+    "imagen": "./recursos/Gemini_Generated_Image_a1g139a1g139a1g1 (3).jpg",
+    "caracteristicas": [
+      "Gancho metálico giratorio para colgar",
+      "Bolsillos de malla transparente con cierre",
+      "Tejido exterior resistente a salpicaduras",
+      "Costuras selladas en la base"
+    ]
+  }
+  ,
+  {
+    "id": "jbj-acc-12",
+    "nombre": "Neceser Textil JBJ Traveler Washbag",
+    "categoria": "Accesorios Textiles",
+    "descripcion": "Organizador de aseo o herramientas con gancho colgador incorporado. Confección textil con interior impermeable fácil de limpiar.",
+    "material": "Poliéster ripstop con forro de PVC impermeable",
+    "capacidad": "4 Litros",
+    "dimensiones": "25 x 18 x 9 cm",
+    "precio": "$12.400",
+    "destacado": false,
+    "etiqueta": "Accesorio",
+    "imagen": "./recursos/Gemini_Generated_Image_a1g139a1g139a1g1 (4).jpg",
+    "caracteristicas": [
+      "Gancho metálico giratorio para colgar",
+      "Bolsillos de malla transparente con cierre",
+      "Tejido exterior resistente a salpicaduras",
+      "Costuras selladas en la base"
+    ]
+  }
+  ,
+  {
+    "id": "jbj-acc-13",
+    "nombre": "Neceser Textil JBJ Traveler Washbag",
+    "categoria": "Accesorios Textiles",
+    "descripcion": "Organizador de aseo o herramientas con gancho colgador incorporado. Confección textil con interior impermeable fácil de limpiar.",
+    "material": "Poliéster ripstop con forro de PVC impermeable",
+    "capacidad": "4 Litros",
+    "dimensiones": "25 x 18 x 9 cm",
+    "precio": "$12.400",
+    "destacado": false,
+    "etiqueta": "Accesorio",
+    "imagen": "./recursos/Gemini_Generated_Image_a1g139a1g139a1g1 (5).jpg",
+    "caracteristicas": [
+      "Gancho metálico giratorio para colgar",
+      "Bolsillos de malla transparente con cierre",
+      "Tejido exterior resistente a salpicaduras",
+      "Costuras selladas en la base"
+    ]
+  }
+  ,
+  {
+    "id": "jbj-acc-14",
+    "nombre": "Neceser Textil JBJ Traveler Washbag",
+    "categoria": "Accesorios Textiles",
+    "descripcion": "Organizador de aseo o herramientas con gancho colgador incorporado. Confección textil con interior impermeable fácil de limpiar.",
+    "material": "Poliéster ripstop con forro de PVC impermeable",
+    "capacidad": "4 Litros",
+    "dimensiones": "25 x 18 x 9 cm",
+    "precio": "$12.400",
+    "destacado": false,
+    "etiqueta": "Accesorio",
+    "imagen": "./recursos/Gemini_Generated_Image_a1g139a1g139a1g1.jpg",
+    "caracteristicas": [
+      "Gancho metálico giratorio para colgar",
+      "Bolsillos de malla transparente con cierre",
+      "Tejido exterior resistente a salpicaduras",
+      "Costuras selladas en la base"
+    ]
+  }
+]
