@@ -2,24 +2,6 @@
  * JBJ Manufactura Textil - Main Application Script
  */
 
-// Obtiene la configuración de forma universal (compatible con doble clic file:// y servidores web)
-const JBJ_CONFIG = (typeof window !== "undefined" && window.JBJ_CONFIG) ? window.JBJ_CONFIG : {
-  whatsappNumber: "593987939505",
-  email: "contacto@jbjmochilas.com",
-  telefono: "0987939505",
-  direccion: "Lima y Luxemburgo",
-  horario: "Lunes a Viernes de 8:00 a 18:00 hs",
-  empresa: "JBJ"
-};
-
-const getCleanWhatsAppNumber = (typeof window !== "undefined" && window.getCleanWhatsAppNumber)
-  ? window.getCleanWhatsAppNumber
-  : function(num) {
-      let clean = (num || "").toString().replace(/[^0-9]/g, "");
-      if (clean.startsWith("09") && clean.length === 10) clean = "593" + clean.substring(1);
-      return clean;
-    };
-
 document.addEventListener("DOMContentLoaded", () => {
   // 1. Inicializar catálogo interactivo
   if (typeof window.initProducts === "function") {
@@ -49,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
  * Rellena los datos de contacto configurables en el sitio
  */
 function populateContactInfo() {
-  const config = window.JBJ_CONFIG || JBJ_CONFIG;
+  const config = window.JBJ_CONFIG;
 
   const phoneElements = document.querySelectorAll(".jbj-phone");
   phoneElements.forEach((el) => (el.textContent = config.telefono));
@@ -88,21 +70,22 @@ function setupMobileMenu() {
   });
 }
 
-/**
- * Configura el botón flotante de WhatsApp
- */
 function setupWhatsAppFloat() {
   const waFloat = document.getElementById("whatsapp-float-btn");
   if (!waFloat) return;
 
-  const config = window.JBJ_CONFIG || JBJ_CONFIG;
+  const config = window.JBJ_CONFIG;
   const cleanWa = getCleanWhatsAppNumber(config.whatsappNumber);
 
   const defaultMsg = encodeURIComponent(
-    "¡Hola JBJ! Me contacto desde su página web para solicitar información sobre fabricación de mochilas y catálogo."
+    "¡Hola JBJ! Me contacto desde su página web para obtener más información."
   );
+
   waFloat.href = `https://wa.me/${cleanWa}?text=${defaultMsg}`;
+  waFloat.target = "_blank";
+  waFloat.rel = "noopener noreferrer";
 }
+
 
 /**
  * Formulario de contacto con redirección asistida a WhatsApp o email
@@ -116,7 +99,7 @@ function setupContactForm() {
   contactForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const config = window.JBJ_CONFIG || JBJ_CONFIG;
+    const config = window.JBJ_CONFIG;
     const cleanWa = getCleanWhatsAppNumber(config.whatsappNumber);
 
     const nombre = document.getElementById("form-nombre")?.value.trim() || "";

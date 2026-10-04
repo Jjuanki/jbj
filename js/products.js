@@ -7,7 +7,7 @@
 // CONFIGURACIÓN DE CONTACTO (Modifica estos valores con tus datos reales)
 // ============================================================================
 const JBJ_CONFIG = {
-  whatsappNumber: "593987939505", 
+  whatsappNumber: "593987939505",
   email: "luiscaranquijbj@hotmail.com",
   telefono: "0987939505",
   direccion: "Lima y Luxemburgo",
