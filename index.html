@@ -280,7 +280,7 @@
             Nuestras Líneas de Fabricación
           </h2>
           <p class="text-slate-600 text-sm mt-2 max-w-xl">
-            Selecciona una categoría o busca por nombre de producto, capacidad o material para encontrar la mochila perfecta.
+            Las mochilas mostradas son hechas bajo pedido. Puedes elegir un diseño del catálogo o solicitar un diseño personalizado con tu logo o colores preferidos. Contáctanos para cotizar tu pedido al por mayor o minorista.
           </p>
         </div>
 
@@ -301,21 +301,31 @@
         </div>
       </div>
 
-      <!-- Filtros por Categoría dinámicos -->
-      <div class="mt-8 flex items-center gap-2 overflow-x-auto pb-4 no-scrollbar" id="category-filters">
-        <!-- Renderizado dinámico desde products.js -->
+      <div class="mt-6 flex flex-wrap items-center justify-between gap-3">
+        <p class="text-xs text-slate-500">
+          <span id="catalogo-count" class="font-bold text-slate-800">0</span> productos disponibles
+        </p>
       </div>
 
-      <!-- Grid de Productos -->
-      <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-8">
-        <!-- Los productos se inyectan dinámicamente con JavaScript -->
-      </div>
+      <div id="catalogo-content">
+        <!-- Filtros por Categoría dinámicos -->
+        <div class="mt-2 flex items-center gap-2 overflow-x-auto pb-4 no-scrollbar" id="category-filters">
+          <!-- Renderizado dinámico desde products.js -->
+        </div>
 
-      <!-- Mensaje cuando no hay resultados en la búsqueda -->
-      <div id="no-results" class="hidden text-center py-16 bg-white rounded-3xl border border-slate-200 mt-8 shadow-sm">
-        <div class="text-4xl mb-3">🔍</div>
-        <h3 class="text-lg font-bold text-slate-800">No encontramos coincidencias</h3>
-        <p class="text-slate-500 text-sm max-w-sm mx-auto mt-1">Prueba con otra palabra clave o selecciona "Todas" en las categorías para ver todo el catálogo.</p>
+        <!-- Cuadro deslizable con productos -->
+        <div id="catalogo-scroll" class="catalogo-scroll mt-2 overflow-x-auto pb-4 no-scrollbar">
+          <div id="products-grid" class="catalogo-grid grid gap-6">
+            <!-- Los productos se inyectan dinámicamente con JavaScript -->
+          </div>
+        </div>
+
+        <!-- Mensaje cuando no hay resultados en la búsqueda -->
+        <div id="no-results" class="hidden text-center py-16 bg-white rounded-3xl border border-slate-200 mt-8 shadow-sm">
+          <div class="text-4xl mb-3">🔍</div>
+          <h3 class="text-lg font-bold text-slate-800">No encontramos coincidencias</h3>
+          <p class="text-slate-500 text-sm max-w-sm mx-auto mt-1">Prueba con otra palabra clave o selecciona "Todas" en las categorías para ver todo el catálogo.</p>
+        </div>
       </div>
 
     </div>
@@ -597,6 +607,7 @@
   </footer>
 
   <!-- Scripts: Carga estándar universal sin bloqueo por CORS en file:// ni dependencias estrictas -->
+  <script src="js/data/products-fallback.js"></script>
   <script src="js/products.js"></script>
   <script src="js/main.js"></script>
 </body>

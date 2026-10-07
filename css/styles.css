@@ -50,6 +50,45 @@ html {
   box-shadow: 0 16px 32px -8px rgba(15, 23, 42, 0.12);
 }
 
+/* Catálogo desplegable y deslizable horizontalmente */
+.catalogo-scroll {
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: #94a3b8 transparent;
+}
+
+.catalogo-grid {
+  display: flex !important;
+  width: max-content;
+  min-width: 100%;
+}
+
+.catalogo-grid .product-card {
+  flex: 0 0 min(82vw, 340px);
+  scroll-snap-align: start;
+}
+
+.catalogo-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.catalogo-scroll::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 999px;
+}
+
+@media (min-width: 640px) {
+  .catalogo-grid .product-card {
+    flex-basis: min(43vw, 360px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .catalogo-grid .product-card {
+    flex-basis: min(31vw, 360px);
+  }
+}
+
 /* Botón flotante de WhatsApp con efecto de pulso */
 .whatsapp-float {
   position: fixed;
